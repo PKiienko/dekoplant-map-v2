@@ -1,7 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import TopBar from './components/TopBar';
-import List from './components/List';
 import Map from './components/Map';
 import sku from './sku';
 
