@@ -1,6 +1,13 @@
 import './Map.css';
+import List from './List';
 
-const Map = ({ onLocationClickHandler, selectedLocationId, selectedItem }) => {
+const Map = ({
+  onLocationClickHandler,
+  selectedLocationId,
+  selectedItem,
+  filteredPlants,
+  onItemClickHandler,
+}) => {
   return (
     <>
       <div className='shaded-field'>
@@ -314,6 +321,517 @@ const Map = ({ onLocationClickHandler, selectedLocationId, selectedItem }) => {
               }`}
               id='15'
               onClick={() => onLocationClickHandler(15)}
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div className='list-field-1-4'>
+        <List
+          filteredPlants={filteredPlants}
+          onItemClickHandler={onItemClickHandler}
+          selectedItem={selectedItem}
+        />
+        <div className='field-1-4'>
+          <div className='field-1'>
+            <div className='left-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(0) ||
+                  selectedItem.locationId === 0
+                    ? 'selected'
+                    : ''
+                }`}
+                id='0'
+                onClick={() => onLocationClickHandler(0)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(1) ||
+                  selectedItem.locationId === 1
+                    ? 'selected'
+                    : ''
+                } `}
+                id='1'
+                onClick={() => onLocationClickHandler(1)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(2) ||
+                  selectedItem.locationId === 2
+                    ? 'selected'
+                    : ''
+                }`}
+                id='2'
+                onClick={() => onLocationClickHandler(2)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(3) ||
+                  selectedItem.locationId === 3
+                    ? 'selected'
+                    : ''
+                }`}
+                id='3'
+                onClick={() => onLocationClickHandler(3)}
+              ></div>
+            </div>
+            <div className='right-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(4) ||
+                  selectedItem.locationId === 4
+                    ? 'selected'
+                    : ''
+                }`}
+                id='4'
+                onClick={() => onLocationClickHandler(4)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(5) ||
+                  selectedItem.locationId === 5
+                    ? 'selected'
+                    : ''
+                }`}
+                id='5'
+                onClick={() => onLocationClickHandler(5)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(6) ||
+                  selectedItem.locationId === 6
+                    ? 'selected'
+                    : ''
+                }`}
+                id='6'
+                onClick={() => onLocationClickHandler(6)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(7) ||
+                  selectedItem.locationId === 7
+                    ? 'selected'
+                    : ''
+                }`}
+                id='7'
+                onClick={() => onLocationClickHandler(7)}
+              ></div>
+            </div>
+          </div>
+          <div className='field-2'>
+            <div className='left-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(0) ||
+                  selectedItem.locationId === 0
+                    ? 'selected'
+                    : ''
+                }`}
+                id='0'
+                onClick={() => onLocationClickHandler(0)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(1) ||
+                  selectedItem.locationId === 1
+                    ? 'selected'
+                    : ''
+                } `}
+                id='1'
+                onClick={() => onLocationClickHandler(1)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(2) ||
+                  selectedItem.locationId === 2
+                    ? 'selected'
+                    : ''
+                }`}
+                id='2'
+                onClick={() => onLocationClickHandler(2)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(3) ||
+                  selectedItem.locationId === 3
+                    ? 'selected'
+                    : ''
+                }`}
+                id='3'
+                onClick={() => onLocationClickHandler(3)}
+              ></div>
+            </div>
+            <div className='right-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(4) ||
+                  selectedItem.locationId === 4
+                    ? 'selected'
+                    : ''
+                }`}
+                id='4'
+                onClick={() => onLocationClickHandler(4)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(5) ||
+                  selectedItem.locationId === 5
+                    ? 'selected'
+                    : ''
+                }`}
+                id='5'
+                onClick={() => onLocationClickHandler(5)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(6) ||
+                  selectedItem.locationId === 6
+                    ? 'selected'
+                    : ''
+                }`}
+                id='6'
+                onClick={() => onLocationClickHandler(6)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(7) ||
+                  selectedItem.locationId === 7
+                    ? 'selected'
+                    : ''
+                }`}
+                id='7'
+                onClick={() => onLocationClickHandler(7)}
+              ></div>
+            </div>
+          </div>
+          <div className='field-3'>
+            <div className='left-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(0) ||
+                  selectedItem.locationId === 0
+                    ? 'selected'
+                    : ''
+                }`}
+                id='0'
+                onClick={() => onLocationClickHandler(0)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(1) ||
+                  selectedItem.locationId === 1
+                    ? 'selected'
+                    : ''
+                } `}
+                id='1'
+                onClick={() => onLocationClickHandler(1)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(2) ||
+                  selectedItem.locationId === 2
+                    ? 'selected'
+                    : ''
+                }`}
+                id='2'
+                onClick={() => onLocationClickHandler(2)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(3) ||
+                  selectedItem.locationId === 3
+                    ? 'selected'
+                    : ''
+                }`}
+                id='3'
+                onClick={() => onLocationClickHandler(3)}
+              ></div>
+            </div>
+            <div className='right-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(4) ||
+                  selectedItem.locationId === 4
+                    ? 'selected'
+                    : ''
+                }`}
+                id='4'
+                onClick={() => onLocationClickHandler(4)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(5) ||
+                  selectedItem.locationId === 5
+                    ? 'selected'
+                    : ''
+                }`}
+                id='5'
+                onClick={() => onLocationClickHandler(5)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(6) ||
+                  selectedItem.locationId === 6
+                    ? 'selected'
+                    : ''
+                }`}
+                id='6'
+                onClick={() => onLocationClickHandler(6)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(7) ||
+                  selectedItem.locationId === 7
+                    ? 'selected'
+                    : ''
+                }`}
+                id='7'
+                onClick={() => onLocationClickHandler(7)}
+              ></div>
+            </div>
+          </div>
+          <div className='field-4'>
+            <div className='left-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(0) ||
+                  selectedItem.locationId === 0
+                    ? 'selected'
+                    : ''
+                }`}
+                id='0'
+                onClick={() => onLocationClickHandler(0)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(1) ||
+                  selectedItem.locationId === 1
+                    ? 'selected'
+                    : ''
+                } `}
+                id='1'
+                onClick={() => onLocationClickHandler(1)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(2) ||
+                  selectedItem.locationId === 2
+                    ? 'selected'
+                    : ''
+                }`}
+                id='2'
+                onClick={() => onLocationClickHandler(2)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(3) ||
+                  selectedItem.locationId === 3
+                    ? 'selected'
+                    : ''
+                }`}
+                id='3'
+                onClick={() => onLocationClickHandler(3)}
+              ></div>
+            </div>
+            <div className='right-part'>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(4) ||
+                  selectedItem.locationId === 4
+                    ? 'selected'
+                    : ''
+                }`}
+                id='4'
+                onClick={() => onLocationClickHandler(4)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(5) ||
+                  selectedItem.locationId === 5
+                    ? 'selected'
+                    : ''
+                }`}
+                id='5'
+                onClick={() => onLocationClickHandler(5)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(6) ||
+                  selectedItem.locationId === 6
+                    ? 'selected'
+                    : ''
+                }`}
+                id='6'
+                onClick={() => onLocationClickHandler(6)}
+              ></div>
+              <div
+                className={`sector ${
+                  selectedLocationId.includes(7) ||
+                  selectedItem.locationId === 7
+                    ? 'selected'
+                    : ''
+                }`}
+                id='7'
+                onClick={() => onLocationClickHandler(7)}
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='field-5-6'>
+        <div className='field-5'>
+          <div className='left-part'>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(0) || selectedItem.locationId === 0
+                  ? 'selected'
+                  : ''
+              }`}
+              id='0'
+              onClick={() => onLocationClickHandler(0)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(1) || selectedItem.locationId === 1
+                  ? 'selected'
+                  : ''
+              } `}
+              id='1'
+              onClick={() => onLocationClickHandler(1)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(2) || selectedItem.locationId === 2
+                  ? 'selected'
+                  : ''
+              }`}
+              id='2'
+              onClick={() => onLocationClickHandler(2)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(3) || selectedItem.locationId === 3
+                  ? 'selected'
+                  : ''
+              }`}
+              id='3'
+              onClick={() => onLocationClickHandler(3)}
+            ></div>
+          </div>
+          <div className='right-part'>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(4) || selectedItem.locationId === 4
+                  ? 'selected'
+                  : ''
+              }`}
+              id='4'
+              onClick={() => onLocationClickHandler(4)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(5) || selectedItem.locationId === 5
+                  ? 'selected'
+                  : ''
+              }`}
+              id='5'
+              onClick={() => onLocationClickHandler(5)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(6) || selectedItem.locationId === 6
+                  ? 'selected'
+                  : ''
+              }`}
+              id='6'
+              onClick={() => onLocationClickHandler(6)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(7) || selectedItem.locationId === 7
+                  ? 'selected'
+                  : ''
+              }`}
+              id='7'
+              onClick={() => onLocationClickHandler(7)}
+            ></div>
+          </div>
+        </div>
+        <div className='field-6'>
+          <div className='left-part'>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(0) || selectedItem.locationId === 0
+                  ? 'selected'
+                  : ''
+              }`}
+              id='0'
+              onClick={() => onLocationClickHandler(0)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(1) || selectedItem.locationId === 1
+                  ? 'selected'
+                  : ''
+              } `}
+              id='1'
+              onClick={() => onLocationClickHandler(1)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(2) || selectedItem.locationId === 2
+                  ? 'selected'
+                  : ''
+              }`}
+              id='2'
+              onClick={() => onLocationClickHandler(2)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(3) || selectedItem.locationId === 3
+                  ? 'selected'
+                  : ''
+              }`}
+              id='3'
+              onClick={() => onLocationClickHandler(3)}
+            ></div>
+          </div>
+          <div className='right-part'>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(4) || selectedItem.locationId === 4
+                  ? 'selected'
+                  : ''
+              }`}
+              id='4'
+              onClick={() => onLocationClickHandler(4)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(5) || selectedItem.locationId === 5
+                  ? 'selected'
+                  : ''
+              }`}
+              id='5'
+              onClick={() => onLocationClickHandler(5)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(6) || selectedItem.locationId === 6
+                  ? 'selected'
+                  : ''
+              }`}
+              id='6'
+              onClick={() => onLocationClickHandler(6)}
+            ></div>
+            <div
+              className={`sector ${
+                selectedLocationId.includes(7) || selectedItem.locationId === 7
+                  ? 'selected'
+                  : ''
+              }`}
+              id='7'
+              onClick={() => onLocationClickHandler(7)}
             ></div>
           </div>
         </div>

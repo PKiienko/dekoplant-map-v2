@@ -79,11 +79,8 @@ function App() {
           onLocationClickHandler={onLocationClickHandler}
           selectedLocationId={selectedLocationId}
           selectedItem={selectedItem}
-        />
-        <List
           filteredPlants={filteredPlants}
           onItemClickHandler={onItemClickHandler}
-          selectedItem={selectedItem}
         />
       </div>
     </div>
