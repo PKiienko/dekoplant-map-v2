@@ -1,0 +1,43 @@
+.greenhouses {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.greenhouse1,
+.greenhouse2,
+.shaded-field {
+  display: flex;
+  border: 0.2rem solid #525654;
+  border-radius: 0.4rem;
+  width: 10rem;
+  margin-bottom: 1rem;
+  background-color: #b9bcba;
+}
+
+.shaded-field {
+  margin: 1rem 0 0 1rem;
+}
+
+.shaded-left-part,
+.shaded-right-part {
+  height: 32rem;
+  margin: 0.5rem;
+}
+
+.left-part,
+.right-part {
+  height: 16rem;
+  margin: 0.5rem;
+}
+
+.sector {
+  width: 4rem;
+  height: 4rem;
+  background-color: #e8e9e8;
+  border-radius: 0.4rem;
+}
+
+.selected {
+  background-color: #e0ffcd;
+}

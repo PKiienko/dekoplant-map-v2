@@ -1,0 +1,17 @@
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 2rem;
+  padding: 1rem;
+}
+
+.topbar-btn,
+.topbar-search {
+  border: none;
+  border-radius: 0.2rem;
+  width: 8rem;
+  height: 2rem;
+  background-color: white;
+}

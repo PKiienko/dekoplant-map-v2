@@ -1,0 +1,27 @@
+.list-items {
+  width: 33rem;
+  height: 16rem;
+  margin: 1rem 1rem 1rem 0rem;
+  padding: 0.5rem 0rem;
+  overflow: scroll;
+  flex-shrink: 0;
+  border: 0.2rem solid #525654;
+  border-radius: 0.4rem;
+  background-color: #b9bcba;
+}
+
+.item {
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: smaller;
+}
+
+.selected-item {
+  background-color: #e0ffcd;
+  border-radius: 0.2rem;
+}
+
+.list-items::-webkit-scrollbar {
+  display: none;
+}
