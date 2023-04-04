@@ -10,6 +10,7 @@ function App() {
   const [filteredPlants, setFilteredplants] = useState([]);
   const [selectedLocationId, setSelectedLocationId] = useState([]);
   const [selectedItem, setSelectedItem] = useState({});
+  const [oneVarietySum, setOneVarietySum] = useState(null);
 
   useEffect(() => {
     if (
@@ -32,6 +33,16 @@ function App() {
       );
     }
   }, [selectedLocationId, inputText, selectedItem]);
+
+  useEffect(() => {
+    const total = sku.reduce((total, obj) => {
+      if (obj.name === selectedItem.name) {
+        return total + obj.quantity;
+      }
+      return total;
+    }, 0);
+    setOneVarietySum(total);
+  }, [selectedItem]);
 
   const onLocationClickHandler = (id) => {
     if (selectedLocationId.includes(id)) {
@@ -72,6 +83,8 @@ function App() {
         selectedLocationId={selectedLocationId}
         inputText={inputText}
         inputTextHandler={inputTextHandler}
+        filteredPlants={filteredPlants}
+        oneVarietySum={oneVarietySum}
       />
       <div className='content'>
         <Map

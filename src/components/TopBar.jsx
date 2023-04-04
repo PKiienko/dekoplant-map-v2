@@ -3,15 +3,16 @@ import './TopBar.css';
 const TopBar = ({
   clearSelected,
   selectedItem,
-  selectedLocationId,
   inputText,
   inputTextHandler,
+  oneVarietySum,
 }) => {
   return (
     <div className='topbar-container'>
       <input
         className='topbar-search'
         type='search'
+        placeholder='Введіть назву тут'
         value={inputText}
         onChange={inputTextHandler}
       ></input>
@@ -19,12 +20,16 @@ const TopBar = ({
         className='topbar-btn'
         onClick={clearSelected}
       >
-        Clear All Selected
+        Скинути вибір
       </button>
-      {selectedLocationId.length > 0 ? (
-        <h4>Selected Location: {selectedLocationId}</h4>
-      ) : null}
-      {selectedItem.name ? <h4>Selected Plant: {selectedItem.name}</h4> : null}
+      <div className='top-bar-info'>
+        {selectedItem.name ? (
+          <p>Вибрана рослина: {selectedItem.name}.</p>
+        ) : null}
+        {selectedItem.name ? (
+          <p>Загальна кількість на залишку: {oneVarietySum}</p>
+        ) : null}
+      </div>
     </div>
   );
 };

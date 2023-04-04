@@ -1,5 +1,6 @@
 import './List.css';
 import { useEffect } from 'react';
+import locationIds from './../locationIds';
 
 const List = ({ filteredPlants, onItemClickHandler, selectedItem }) => {
   useEffect(() => {
@@ -12,13 +13,15 @@ const List = ({ filteredPlants, onItemClickHandler, selectedItem }) => {
         ? filteredPlants.map((el) => (
             <div
               className={`item ${selectedItem === el ? 'selected-item' : ''}`}
-              key={el.id}
+              key={Math.floor(Math.random())}
               onClick={() => onItemClickHandler(el)}
             >
-              <span>{el.name + '   '}</span>
-              <span>{el.pot + '   '}</span>
-              <span>{el.quantity + '   '}</span>
-              <span>{el.locationId + '   '}</span>
+              <p className='plant-name'>{el.name + '   '}</p>
+              <p className='plant-pot'>{el.pot + '   '}</p>
+              <p className='plant-locationDetails'>
+                {locationIds[el.locationId].description + '   '}
+              </p>
+              <p className='plant-quantity'>{el.quantity + '   '}</p>
             </div>
           ))
         : null}

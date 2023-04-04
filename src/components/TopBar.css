@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   height: 2rem;
   padding: 1rem;
 }
@@ -14,4 +13,22 @@
   width: 8rem;
   height: 2rem;
   background-color: white;
+  margin-right: 1rem;
+  font-weight: 400;
+  font-size: smaller;
+}
+
+.topbar-search {
+  width: 15rem;
+  padding-left: 1rem;
+}
+
+.top-bar-info {
+  display: flex;
+  font-weight: 400;
+  font-size: smaller;
+}
+
+.top-bar-info p {
+  margin-right: 0.5rem;
 }

@@ -28,13 +28,13 @@
 .list-field-1-4,
 .field-1-4 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .list-field-1-4 {
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .field-5-6 {
@@ -51,7 +51,6 @@
   border: 0.2rem solid #525654;
   border-radius: 0.4rem;
   width: 10rem;
-  margin: 0 1rem 0 0;
   background-color: #b9bcba;
 }
 
@@ -72,10 +71,16 @@
 }
 
 .sector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 4rem;
   height: 4rem;
   background-color: #e8e9e8;
   border-radius: 0.4rem;
+  font-weight: 400;
+  font-size: smaller;
+  cursor: pointer;
 }
 
 .selected {
