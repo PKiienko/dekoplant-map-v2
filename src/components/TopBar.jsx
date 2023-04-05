@@ -1,4 +1,5 @@
 import './TopBar.css';
+import locationIds from './../locationIds';
 
 const TopBar = ({
   clearSelected,
@@ -6,7 +7,10 @@ const TopBar = ({
   inputText,
   inputTextHandler,
   oneVarietySum,
+  selectedLocationId,
+  selectedLocationSum,
 }) => {
+  console.log(selectedLocationId);
   return (
     <div className='topbar-container'>
       <input
@@ -22,12 +26,27 @@ const TopBar = ({
       >
         Скинути вибір
       </button>
+
       <div className='top-bar-info'>
-        {selectedItem.name ? (
-          <p>Вибрана рослина: {selectedItem.name}.</p>
+        {selectedLocationId.length > 0 ? (
+          <>
+            <p>Вибрані сектори: </p>
+            {selectedLocationId.map((el) => {
+              return <p key={Math.random()}>{locationIds[el].description}</p>;
+            })}
+            <p>.</p>
+            <p>
+              Загальна кількість рослин на вибраних секторах:{' '}
+              {selectedLocationSum}
+            </p>
+          </>
         ) : null}
+
         {selectedItem.name ? (
-          <p>Загальна кількість на залишку: {oneVarietySum}</p>
+          <>
+            <p>Вибрана рослина: {selectedItem.name}.</p>
+            <p>Загальна кількість на залишку: {oneVarietySum}</p>
+          </>
         ) : null}
       </div>
     </div>

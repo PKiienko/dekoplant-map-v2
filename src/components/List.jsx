@@ -13,7 +13,7 @@ const List = ({ filteredPlants, onItemClickHandler, selectedItem }) => {
         ? filteredPlants.map((el) => (
             <div
               className={`item ${selectedItem === el ? 'selected-item' : ''}`}
-              key={Math.floor(Math.random())}
+              key={Math.random()}
               onClick={() => onItemClickHandler(el)}
             >
               <p className='plant-name'>{el.name + '   '}</p>
