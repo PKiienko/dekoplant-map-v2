@@ -1,5 +1,4 @@
 import './List.css';
-import { useEffect } from 'react';
 import locationIds from './../locationIds';
 
 const List = ({ filteredPlants, onItemClickHandler, selectedItem }) => {
