@@ -3,10 +3,6 @@ import { useEffect } from 'react';
 import locationIds from './../locationIds';
 
 const List = ({ filteredPlants, onItemClickHandler, selectedItem }) => {
-  useEffect(() => {
-    console.log(filteredPlants);
-  }, [filteredPlants]);
-
   return (
     <div className='list-items'>
       {filteredPlants.length > 0

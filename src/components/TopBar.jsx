@@ -10,7 +10,6 @@ const TopBar = ({
   selectedLocationId,
   selectedLocationSum,
 }) => {
-  console.log(selectedLocationId);
   return (
     <div className='topbar-container'>
       <input
