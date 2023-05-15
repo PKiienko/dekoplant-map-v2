@@ -6,7 +6,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #e8e9e8;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
 }
 
 .content {
